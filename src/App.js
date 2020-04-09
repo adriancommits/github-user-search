@@ -3,12 +3,14 @@ import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
 import Search from "./components/users/Search";
+import Alert from "./components/layout/Alert";
 import axios from "axios";
 
 class App extends Component {
   state = {
     users: [],
     loading: false,
+    alert: null,
   };
 
   // search github users
@@ -26,16 +28,26 @@ class App extends Component {
   // clear Users from state
   clearUsers = () => this.setState({ users: [], loading: false });
 
+  // display an Alert above the searchfield
+  setAlert = (msg, type) => {
+    this.setState({ alert: { msg, type } });
+    console.log("alert should be displayed");
+
+    setTimeout(() => this.setState({ alert: null }), 5000);
+  };
+
   render() {
-    const { users, loading } = this.state;
+    const { alert, users, loading } = this.state;
 
     return (
       <div className="App">
         <Navbar></Navbar>
         <div className="container">
+          <Alert alert={alert}></Alert>
           <Search
             searchUsers={this.searchUsers}
             clearUsers={this.clearUsers}
+            setAlert={this.setAlert}
             showClear={users.length > 0 ? true : false}
           />
           <Users loading={loading} users={users}></Users>
