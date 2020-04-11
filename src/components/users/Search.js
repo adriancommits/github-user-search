@@ -44,7 +44,7 @@ const Search = ({ searchUsers, displayAlert, showClear, clearUsers }) => {
 Search.propTypes = {
   searchUsers: PropTypes.func.isRequired,
   clearUsers: PropTypes.func.isRequired,
-  setAlert: PropTypes.func.isRequired,
+  displayAlert: PropTypes.func.isRequired,
   showClear: PropTypes.bool.isRequired,
 };
 
