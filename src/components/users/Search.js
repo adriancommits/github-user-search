@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const Search = ({ searchUsers, setAlert, showClear, clearUsers }) => {
+const Search = ({ searchUsers, displayAlert, showClear, clearUsers }) => {
   const [text, setText] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (text === "") {
-      setAlert("Please enter something", "light");
+      displayAlert("Please enter something", "light");
     } else {
       searchUsers(text);
       setText("");
