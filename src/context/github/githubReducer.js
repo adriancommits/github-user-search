@@ -39,7 +39,6 @@ export default (state, action) => {
         repos: action.payload,
         loading: false,
       };
-
     case SET_LOADING:
       return {
         // state is immutable. we cant just reassign it. we have to make a copy of it and then add any additions or changes to it. we use the spread operator to copy whats in the current state
