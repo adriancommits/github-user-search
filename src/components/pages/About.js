@@ -4,8 +4,16 @@ const About = () => {
   return (
     <>
       <h1>About this app</h1>
-      <p>An app to search Github users</p>
-      <p>Version 1.0</p>
+      <p>
+        I built this app to fool around with Reacts Context API and the Github
+        API.
+      </p>
+      <br />
+      <p>
+        <em>Version 1.0</em>
+        <br />
+        <em>Built by Adrian Haeske.</em>{" "}
+      </p>
     </>
   );
 };
