@@ -13,7 +13,10 @@ const Search = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (text === "") {
-      displayAlert("Please enter something", "light");
+      displayAlert(
+        "Please enter a username or any word that could possibly appear in a username or bio.",
+        "light"
+      );
     } else {
       searchUsers(text);
       setText("");
@@ -28,9 +31,11 @@ const Search = () => {
         <input
           type="text"
           name="text"
-          placeholder="Search Users.."
+          placeholder="Enter any word you like.."
           value={text}
           onChange={onChange}
+          className="text-center"
+          style={{ fontSize: "14px" }}
         />
         <input
           type="submit"
@@ -39,8 +44,12 @@ const Search = () => {
         />
       </form>
       {users.length > 0 && (
-        <button className="btn btn-light btn-block" onClick={clearUsers}>
-          Clear
+        <button
+          className="btn btn-light btn-block"
+          onClick={clearUsers}
+          style={{ fontSize: "14px" }}
+        >
+          Clear results
         </button>
       )}
     </div>
