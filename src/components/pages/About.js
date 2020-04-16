@@ -5,7 +5,7 @@ const About = () => {
     <>
       <h1>About this app</h1>
       <p>
-        I built this app to fool around with Reacts Context API and the Github
+        I built this app to fool around with Reacts Context API and the GitHub
         API.
       </p>
       <br />

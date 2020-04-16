@@ -31,7 +31,7 @@ const Search = () => {
         <input
           type="text"
           name="text"
-          placeholder="Enter any word you like.."
+          placeholder="e.g. John or icecream"
           value={text}
           onChange={onChange}
           className="text-center"
@@ -39,7 +39,7 @@ const Search = () => {
         />
         <input
           type="submit"
-          value="Search"
+          value="Search users"
           className="btn btn-dark btn-block"
         />
       </form>
